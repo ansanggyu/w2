@@ -14,8 +14,8 @@ ext {
     junitVersion = '5.10.0'
 }
 
-sourceCompatibility = '11'
-targetCompatibility = '11'
+sourceCompatibility = '17'
+targetCompatibility = '17'
 
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
@@ -34,7 +34,6 @@ dependencies {
     //lombok 라이브러리 추가
     compileOnly 'org.projectlombok:lombok:1.18.34'
     testCompileOnly 'org.projectlombok:lombok:1.18.34'
-
     annotationProcessor 'org.projectlombok:lombok:1.18.34'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.34'
 
@@ -44,6 +43,11 @@ dependencies {
 
     //마리아디비 추가
     implementation 'org.mariadb.jdbc:mariadb-java-client:3.3.3'
+
+    implementation 'org.slf4j:slf4j-simple:2.0.13'
+
+    implementation 'com.zaxxer:HikariCP:5.0.1'
+
 }
 
 test {

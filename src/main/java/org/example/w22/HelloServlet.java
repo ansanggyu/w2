@@ -20,7 +20,7 @@ public class HelloServlet extends HttpServlet {
         request.setAttribute("msg",msg);
         //간단한 메세지만 전달하기
         try {
-            request.getRequestDispatcher("/WEB-INF/bmiInput.jsp").forward(request,response);
+            request.getRequestDispatcher("/WEB-INF/hello2.jsp").forward(request,response);
         }catch(Exception e)
         {
             e.printStackTrace();
